@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+/* Subrayado al pasar el mouse */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 50px 20px;
+}
+#servicios {
+    padding: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-box {
+    width: 28%;
+    border-top: 4px solid #4B0082;
+    border-bottom: 4px solid #4B0082;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Transición para zoom, sombra y borde */
+    transform-style: preserve-3d; /* Necesario para el efecto 3D */
+}
+
+.service-box:hover {
+    transform: scale(1.1) rotateY(15deg); /* Zoom y rotación en 3D */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    border-color: #4B0082; /* Cambiar el color del borde al hacer hover */
+}
+
+.service-box i {
+    font-size: 40px;
+    color: #4B0082;
+}
+
+.service-box h3 {
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+/* Subrayado en títulos de servicios al pasar el mouse */
+.service-box h3:hover {
+    text-decoration: underline;
+}
+
+.service-box p {
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* Estilos para el botón "Leer más" */
+.service-box .btn-leer-mas {
+    background: #4B0082;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.service-box .btn-leer-mas:hover {
+    background: #3a0066;
+}
+
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.gallery img:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen al 120% */
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4B0082;
+    border-radius: 5px;
+}
+
+button {
+    background: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #3a0066;
+}
+
+.section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section h2 span {
+    color: #4B0082;
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Cambié a flex-start para acercar los elementos */
+    gap: 10px; /* Reducí el espacio entre la foto y el texto */
+    padding: 20px;
+}
+#fotoPerfil img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Transición para el efecto de zoom */
+}
+
+#fotoPerfil img:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+}
+#datosPerfil {
+    text-align: left;
+    max-width: 600px;
+    margin-left: 20px; /* Añadí un margen izquierdo para evitar que el texto quede pegado a la foto */
+}
+
+h2 {
+    margin-bottom: 10px; /* Ajusté el margen inferior para que no haya tanto espacio debajo del título */
+}
+
+.info-personal {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.info-personal li {
+    margin-bottom: 8px; /* Reducí el margen entre los elementos de la lista */
+}
+
+.info-personal li strong {
+    color: #4B0082;
+}
+
+.hola, .nombre {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animación para hacer aparecer el texto */
+.hola {
+    animation: aparecerHola 1s ease-out forwards 1s; /* Aparece después de 2 segundos */
+}
+
+.nombre {
+    animation: aparecerNombre 1s ease-out forwards 2s; /* Aparece después de 4 segundos */
+}
+
+/* Keyframes para la animación de "Hola, Yo soy" */
+@keyframes aparecerHola {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+}
+
+/* Keyframes para la animación de "Ruth Kuzli" */
+@keyframes aparecerNombre {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#inicio h2 span:nth-child(2) {
+    font-family: 'Poppins', sans-serif; /* Aplica Poppins al nombre */
+}

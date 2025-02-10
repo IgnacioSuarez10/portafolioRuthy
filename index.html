@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Modelaje</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+   
+</head>
+
+<body>
+    
+    <header>
+        <img src="default-profile.jpg" alt="Perfil" class="logo">
+        <nav>
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href="#inicio">Acerca de mi</a></li>
+                <li><i class="fa-solid fa-user"></i><a href="#sobre-mi">Servicios</a></li>
+                <li><i class="fa-solid fa-image"></i><a href="#galeria">Proyectos</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="inicio" class="section">
+        <div id="fotoPerfil"> 
+            <img src="luffo.jpg" alt="Foto de Perfil">
+        </div>
+        <div id="datosPerfil">
+            <span class="hola" style="color: black; font-size: 90px;"><b>Hola, Yo soy  </b></span><br>
+            <span class="nombre" style="color: #4B0082; font-size: 70px;"><b> Ruth Kuzli</b> </span><br>
+            
+            <!-- Información Personal -->
+            <ul class="info-personal">
+                <li><strong>Edad:</strong> 23 años</li>
+                <li><strong>Busto:</strong> 90 cm</li>
+                <li><strong>Cintura:</strong> (agregar medida)</li>
+                <li><strong>Cadera:</strong> (agregar medida)</li>
+                <li><strong>Altura:</strong> 1,71 cm</li>
+                <li><strong>Calzado:</strong> 39/40</li>
+                <li><strong>Cabello:</strong> Rubio oscuro</li>
+                <li><strong>Ojos:</strong> Marrones</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section id="servicios" class="section">
+        <h2><span style="color: black;">Mis</span> <span style="color: #4B0082;">Servicios</span></h2>
+        <div class="services">
+            <div class="service-box">
+                <i class="fa-solid fa-camera"></i>
+                <h3>Sesión de Fotos</h3>
+                <p>Realiza sesiones fotográficas profesionales en estudio o en exteriores. Captura momentos únicos con una iluminación perfecta y encuadres que resalten tu mejor versión. Experiencia en moda, retratos y campañas publicitarias. La sesión incluye asesoramiento de poses y dirección de arte personalizada para potenciar tu imagen.</p>
+                <button class="btn-leer-mas">Leer más</button>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-video"></i>
+                <h3>Sesión de Videos</h3>
+                <p>Producción de videos para portafolios, comerciales y redes sociales. Creación de contenido dinámico con alta calidad de imagen, encuadres cinematográficos y una edición que realza cada detalle de tu estilo. Se incluyen clips cortos y videos editados profesionalmente para potenciar tu presencia en redes y promociones.</p>
+                <button class="btn-leer-mas">Leer más</button>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-walking"></i>
+                <h3>Desfiles</h3>
+                <p>Participa en pasarelas de moda de alto nivel. Desarrolla tu presencia escénica y mejora tu postura con entrenamiento personalizado para destacar en eventos y presentaciones de diseñadores reconocidos. Aprende técnicas avanzadas de pasarela y expresión corporal para optimizar tu desempeño en cada presentación.</p>
+                <button class="btn-leer-mas">Leer más</button>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <h2><span style="color: black;">Ultimos </span> <span style="color: #4B0082;">Proyectos</span></h2>
+        <div class="gallery">
+            <img src="luffo.jpg" alt="Foto 1">
+            <img src="luffo.jpg" alt="Foto 2">
+            <img src="luffo.jpg" alt="Foto 3">
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <form onsubmit="enviarCorreo(event)">
+            <input type="text" id="nombre" placeholder="Nombre Completo" required>
+            <input type="tel" id="celular" placeholder="Celular" required>
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - Portafolio de Modelaje</p>
+    </footer>
+</body>
+</html>
+
