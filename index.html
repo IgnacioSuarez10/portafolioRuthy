@@ -6,51 +6,62 @@
     <title>Portafolio de Modelaje</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
     <script src="script.js" defer></script>
+    
    
 </head>
 
 <body>
     
     <header>
-        <img src="default-profile.jpg" alt="Perfil" class="logo">
         <nav>
             <ul>
                 <li><i class="fa-solid fa-house"></i><a href="#inicio">Acerca de mi</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="#sobre-mi">Servicios</a></li>
+                <li><i class="fa-solid fa-user"></i><a href="#servicios">Servicios</a></li>
                 <li><i class="fa-solid fa-image"></i><a href="#galeria">Proyectos</a></li>
                 <li><i class="fa-solid fa-envelope"></i><a href="#contacto">Contacto</a></li>
+                <li><i id="modoOscuro" class="fa-solid fa-moon"></i></li> <!-- Ícono de luna -->
             </ul>
         </nav>
     </header>
 
 
-    <section id="inicio" class="section">
+    <section id="inicio" class="section" data-aos="fade-up">
         <div id="fotoPerfil"> 
-            <img src="luffo.jpg" alt="Foto de Perfil">
+            <img src="fotos/perfil.jpg" alt="Foto de Perfil">
         </div>
         <div id="datosPerfil">
-            <span class="hola" style="color: black; font-size: 90px;"><b>Hola, Yo soy  </b></span><br>
-            <span class="nombre" style="color: #4B0082; font-size: 70px;"><b> Ruth Kuzli</b> </span><br>
-            
-            <!-- Información Personal -->
-            <ul class="info-personal">
-                <li><strong>Edad:</strong> 23 años</li>
-                <li><strong>Busto:</strong> 90 cm</li>
-                <li><strong>Cintura:</strong> (agregar medida)</li>
-                <li><strong>Cadera:</strong> (agregar medida)</li>
-                <li><strong>Altura:</strong> 1,71 cm</li>
-                <li><strong>Calzado:</strong> 39/40</li>
-                <li><strong>Cabello:</strong> Rubio oscuro</li>
-                <li><strong>Ojos:</strong> Marrones</li>
-            </ul>
+            <span class="hola" style="color: black; font-size: 90px;"><b>Ruth Kuzli  </b></span><br>
+            <span class="nombre" style="color: #4B0082; font-size: 70px;"><b> Modelo </b> </span><br>
         </div>
+
+        <section id="biografia" class="section" >
+            <span style="color: black; font-size: 30px;"><b>Datos </b></span>
+            <span style="color: #4B0082; font-size: 30px;"><b>Personales</b> </span>
+            <div class="bio-container">
+                <ul class="info-personal">
+                    <li><i class="fas fa-birthday-cake"></i> <strong>Edad:</strong> 23 años</li>
+                    <li><i class="fas fa-ruler-vertical"></i> <strong>Altura:</strong> 1,71 m</li>
+                    <li><i class="fas fa-tshirt"></i> <strong>Busto:</strong> 90 cm</li>
+                    <li><i class="fas fa-ruler-horizontal"></i> <strong>Cintura:</strong> 20 cm</li>
+                    <li><i class="fas fa-venus"></i> <strong>Cadera:</strong> 20 cm</li>
+                    <li><i class="fas fa-shoe-prints"></i> <strong>Calzado:</strong> 39/40</li>
+                    <li><i class="fas fa-user"></i> <strong>Cabello:</strong> Rubio oscuro</li>
+                    <li><i class="fas fa-eye"></i> <strong>Ojos:</strong> Marrones</li>
+                </ul>
+            </div>
+            
+</section>
+
     </section>
     
 
-    <section id="servicios" class="section">
+    <section id="servicios" class="section" data-aos="zoom-in" >
         <h2><span style="color: black;">Mis</span> <span style="color: #4B0082;">Servicios</span></h2>
         <div class="services">
             <div class="service-box">
@@ -76,16 +87,19 @@
         </div>
     </section>
 
-    <section id="galeria" class="section">
+    <section id="galeria" class="section" data-aos="zoom-in">
         <h2><span style="color: black;">Ultimos </span> <span style="color: #4B0082;">Proyectos</span></h2>
         <div class="gallery">
-            <img src="luffo.jpg" alt="Foto 1">
-            <img src="luffo.jpg" alt="Foto 2">
-            <img src="luffo.jpg" alt="Foto 3">
+            <img src="fotos/1.jpg" alt="Foto 1">
+           
+            <img src="fotos/4.jpg" alt="Foto 3">
+            <img src="fotos/2.jpg" alt="Foto 4">
+            <img src="fotos/3.jpg" alt="Foto 2">
+       
         </div>
     </section>
 
-    <section id="contacto" class="section">
+    <section id="contacto" class="section" data-aos="zoom-in">
         <h2>Contacto</h2>
         <form onsubmit="enviarCorreo(event)">
             <input type="text" id="nombre" placeholder="Nombre Completo" required>
@@ -96,7 +110,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 - Portafolio de Modelaje</p>
+        <p> &copy; 2025 - Portafolio de Modelaje</p>
+            <p id="fecha-hora"></p>
     </footer>
 </body>
 </html>

@@ -13,6 +13,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 15px;
+    justify-content: end;
 }
 
 .logo {
@@ -188,6 +189,7 @@ button:hover {
 
 #inicio {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start; /* Cambié a flex-start para acercar los elementos */
     gap: 10px; /* Reducí el espacio entre la foto y el texto */
@@ -269,3 +271,90 @@ h2 {
 #inicio h2 span:nth-child(2) {
     font-family: 'Poppins', sans-serif; /* Aplica Poppins al nombre */
 }
+
+#modoOscuro {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#modoOscuro:hover {
+    color: #f1c40f; /* Amarillo al pasar el mouse */
+}
+
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header {
+    background: #1e1e1e;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode .service-box {
+    background-color: #222;
+    border-color: #ffffff;
+}
+
+.dark-mode .service-box h3 {
+    color: #ffffff;
+}
+
+.dark-mode .service-box .btn-leer-mas {
+    background: #ffffff;
+    color: #121212;
+}
+
+.dark-mode .service-box .btn-leer-mas:hover {
+    background: #cccccc;
+}
+
+#biografia {
+    text-align: center; /* Centrar el título */
+    padding: 40px 20px;
+}
+
+.bio-container {
+    display: flex;
+    justify-content: center;
+}
+
+.info-personal {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Dos columnas */
+    gap: 15px 50px; /* Espacio entre filas y columnas */
+    font-size: 18px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.info-personal li {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-personal li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.info-personal li strong {
+    color: #4B0082; /* Color principal */
+}
+
+
