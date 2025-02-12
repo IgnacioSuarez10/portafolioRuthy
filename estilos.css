@@ -70,8 +70,8 @@ nav ul li a:hover {
 
 .service-box {
     width: 28%;
-    border-top: 4px solid #4B0082;
-    border-bottom: 4px solid #4B0082;
+    border-top: 4px solid #ec407a;
+    border-bottom: 4px solid #ec407a;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     padding: 20px;
@@ -88,12 +88,12 @@ nav ul li a:hover {
 .service-box:hover {
     transform: scale(1.1) rotateY(15deg); /* Zoom y rotación en 3D */
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
-    border-color: #4B0082; /* Cambiar el color del borde al hacer hover */
+    border-color: #ec407a; /* Cambiar el color del borde al hacer hover */
 }
 
 .service-box i {
     font-size: 40px;
-    color: #4B0082;
+    color: #ec407a;
 }
 
 .service-box h3 {
@@ -112,7 +112,7 @@ nav ul li a:hover {
 
 /* Estilos para el botón "Leer más" */
 .service-box .btn-leer-mas {
-    background: #4B0082;
+    background: #ec407a;
     color: white;
     border: none;
     padding: 8px 15px;
@@ -125,7 +125,7 @@ nav ul li a:hover {
 }
 
 .service-box .btn-leer-mas:hover {
-    background: #3a0066;
+    background: #d81b60;
 }
 .slider {
     width: 75vw;
@@ -147,7 +147,13 @@ nav ul li a:hover {
 
 .slider .slide img {
     width: 100%;
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave */
 }
+
+.slider .slide img:hover {
+    transform: scale(1.1); /* Aplica el zoom al pasar el mouse */
+}
+
 
 @keyframes scroll {
     0% {
@@ -208,12 +214,12 @@ form {
 input, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #4B0082;
+    border: 1px solid #ec407a;
     border-radius: 5px;
 }
 
 button {
-    background: #4B0082;
+    background: #ec407a;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -222,7 +228,7 @@ button {
 }
 
 button:hover {
-    background: #3a0066;
+    background: #d81b60;
 }
 
 .section h2 {
@@ -233,7 +239,7 @@ button:hover {
 }
 
 .section h2 span {
-    color: #4B0082;
+    color: #ec407a;
 }
 
 #inicio {
@@ -246,10 +252,12 @@ button:hover {
 }
 #fotoPerfil img {
     width: 300px;
-    height: auto;
+    height: 300px; /* Asegura que sea un cuadrado */
     border-radius: 50%;
+    object-fit: cover; /* Ajusta la imagen para que se recorte y mantenga la proporción */
     transition: transform 0.3s ease; /* Transición para el efecto de zoom */
 }
+
 
 #fotoPerfil img:hover {
     transform: scale(1.1); /* Efecto de zoom */
@@ -276,7 +284,7 @@ h2 {
 }
 
 .info-personal li strong {
-    color: #4B0082;
+    color: #ec407a;
 }
 
 .hola, .nombre {
@@ -403,7 +411,7 @@ h2 {
 }
 
 .info-personal li strong {
-    color: #4B0082; /* Color principal */
+    color: #ec407a; /* Color principal */
 }
 
 
@@ -420,4 +428,4 @@ h2 {
 
 .social-icons a:hover {
     color: #555; /* Color al pasar el mouse */
-} 
+}
