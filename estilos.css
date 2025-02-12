@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 header {
@@ -126,25 +127,73 @@ nav ul li a:hover {
 .service-box .btn-leer-mas:hover {
     background: #3a0066;
 }
-
-
-.gallery img {
-    width: 200px;
+.slider {
+    width: 75vw;
     height: auto;
-    margin: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Agrega una transición suave */
+    margin: auto;
+    overflow: hidden;
 }
 
-.gallery img:hover {
-    transform: scale(1.5); /* Aumenta el tamaño de la imagen al 120% */
+.slider .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
 }
 
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+/* Estilos para el footer */
 footer {
-    background: #222;
+    display: flex;
+    justify-content: space-between; /* Separa el contenido a los extremos */
+    align-items: center; /* Alinea verticalmente al centro */
+    padding: 10px 20px; /* Añade un poco de espacio interno */
+    background-color: #222; /* Color de fondo opcional */
+    border-top: 1px solid #ddd; /* Borde superior opcional */
     color: white;
-    padding: 20px;
-    margin-top: 20px;
+}
+
+.left {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
+.right {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 20px; /* Espacio entre la fecha y los íconos */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos */
+}
+
+.social-icons a {
+    color: #000; /* Color de los íconos */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #555; /* Color al pasar el mouse */
 }
 
 form {
@@ -358,3 +407,17 @@ h2 {
 }
 
 
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white; /* Color de los íconos */
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #555; /* Color al pasar el mouse */
+} 
