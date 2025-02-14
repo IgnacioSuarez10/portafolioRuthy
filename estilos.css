@@ -6,6 +6,24 @@ body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .service-box h3 {
+        font-size: 18px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
+}
+
 header {
     background: #222;
     color: white;
@@ -53,7 +71,41 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* El header se divide en dos filas */
+        align-items: center; /* Centra todo verticalmente */
+        height: auto;
+        padding: 10px;
+    }
 
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Los elementos del nav se muestran en fila */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        gap: 15px; /* Espacio entre los elementos */
+        margin-right: 0;
+    }
+
+    nav ul li {
+        justify-content: center; /* Centra los elementos dentro de cada li */
+    }
+
+    /* Asegúrate de que los primeros dos elementos estén en la primera fila */
+    nav ul li:nth-child(-n+2) {
+        order: 1; /* Los primeros dos elementos van primero */
+    }
+
+    /* Los siguientes tres elementos (incluyendo la luna) van en la segunda fila */
+    nav ul li:nth-child(n+3) {
+        order: 2; /* Los siguientes tres elementos van después */
+    }
+}
 .section {
     padding: 50px 20px;
 }
@@ -127,6 +179,19 @@ nav ul li a:hover {
 .service-box .btn-leer-mas:hover {
     background: #d81b60;
 }
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
 .slider {
     width: 75vw;
     height: auto;
@@ -155,6 +220,20 @@ nav ul li a:hover {
 
 .slider .slide img:hover {
     transform: scale(1.1); /* Aplica el zoom al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 90vw;
+    }
+
+    .slider .slide {
+        width: 150px;
+    }
+
+    .slider .slide img {
+        width: 100%;
+    }
 }
 
 
@@ -203,6 +282,31 @@ footer {
 
 .social-icons a:hover {
     color: #555; /* Color al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .right {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
 }
 
 form {
@@ -304,6 +408,24 @@ h2 {
     animation: aparecerNombre 1s ease-out forwards 2s; /* Aparece después de 4 segundos */
 }
 
+@media (max-width: 768px) {
+    #inicio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    #fotoPerfil img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #datosPerfil {
+        margin-left: 0;
+        text-align: center;
+    }
+}
 /* Keyframes para la animación de "Hola, Yo soy" */
 @keyframes aparecerHola {
     0% {
