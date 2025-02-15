@@ -355,9 +355,7 @@ button:hover {
     font-family: 'Poppins', sans-serif;
 }
 
-.section h2 span {
-    color: #ec407a;
-}
+
 
 #inicio {
     display: flex;
@@ -587,4 +585,58 @@ h2 {
 
 .social-icons a:hover {
     color: #555; /* Color al pasar el mouse */
+}
+/* Clases para los títulos en modo claro */
+.titulo-negro {
+    color: black; /* Negro en modo claro */
+    font-size: 30px; /* Ajusta el tamaño según sea necesario */
+}
+
+.titulo-rosa {
+    color: #ec407a; /* Rosa en modo claro */
+    font-size: 30px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .titulo-negro {
+    color: white; /* Blanco en modo oscuro */
+}
+
+.dark-mode .titulo-rosa {
+    color: #ec407a; /* Rosa en modo oscuro (se mantiene igual) */
+}
+
+/* Estilos para los títulos grandes en la sección de inicio */
+#datosPerfil .hola {
+    font-size: 90px; /* Tamaño para "Ruth Kuzli" */
+    color: black; /* Negro en modo claro */
+}
+
+#datosPerfil .nombre {
+    font-size: 70px; /* Tamaño para "Modelo" */
+    color: #ec407a; /* Rosa en modo claro */
+}
+
+/* Modo oscuro para los títulos grandes */
+.dark-mode #datosPerfil .hola {
+    color: white; /* Blanco en modo oscuro */
+}
+
+.dark-mode #datosPerfil .nombre {
+    color: #ec407a; /* Rosa en modo oscuro (se mantiene igual) */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    #datosPerfil .hola {
+        font-size: 50px; /* Tamaño reducido para móviles */
+    }
+
+    #datosPerfil .nombre {
+        font-size: 40px; /* Tamaño reducido para móviles */
+    }
+
+    .titulo-negro, .titulo-rosa {
+        font-size: 24px; /* Tamaño reducido para móviles */
+    }
 }
