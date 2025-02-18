@@ -16,6 +16,7 @@ function enviarCorreo(event) {
     document.addEventListener("DOMContentLoaded", function () {
         const modoOscuroBtn = document.getElementById("modoOscuro");
         const body = document.body;
+        
 
         // Comprobar si el usuario ya activó el modo oscuro antes
         if (localStorage.getItem("modoOscuro") === "activado") {
@@ -146,3 +147,7 @@ function posicionCarrusel() {
         }
     } 
 }
+
+
+
+
