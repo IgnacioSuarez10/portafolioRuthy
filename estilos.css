@@ -642,15 +642,18 @@ h2 {
 }
 
 #contenedorVideos{
+    width: 50%;
+    height: auto;
     display: none;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
     padding: 20px;
+    margin: 0 auto; 
 }
 
 .videoEstilos{
-    width: 28%;
+    width: 100%; /* Tamaño máximo */
     border-top: 4px solid #ec407a;
     border-bottom: 4px solid #ec407a;
     border-left: 1px solid #ccc;
@@ -664,6 +667,11 @@ h2 {
     gap: 2px;
     padding-bottom: 10px;
 }
+.videoEstilos video {
+    width: 95%; /* El video ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+}
+
 .videoEstilos:hover {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
     border-color: #ec407a; /* Cambiar el color del borde al hacer hover */
@@ -671,14 +679,15 @@ h2 {
 
 @media (max-width: 768px) {
     #contenedorVideos {
+        width: 60%;
         flex-direction: column; /* Los videos se acomodan en columna */
         align-items: center; /* Centra los elementos en pantalla */
     }
 
     .videoEstilos {
-        width: 80%;
-        margin-bottom: 20px;
-        height: 400px;
+        width: 90%;
+        margin-bottom: 10px;
+        height: 365px;
     }
 }
 
