@@ -642,7 +642,8 @@ h2 {
 }
 
 #contenedorVideos{
-    display: flex;
+    display: none;
+
     flex-direction: row;
     justify-content: center;
     gap: 10px;
@@ -663,4 +664,26 @@ h2 {
     align-items: center;
     gap: 2px;
     padding-bottom: 10px;
+}
+.videoEstilos:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    border-color: #ec407a; /* Cambiar el color del borde al hacer hover */
+}
+
+@media (max-width: 768px) {
+    #contenedorVideos {
+        flex-direction: column; /* Los videos se acomodan en columna */
+        align-items: center; /* Centra los elementos en pantalla */
+    }
+
+    .videoEstilos {
+        width: 90%; /* Que ocupe casi toda la pantalla en móviles */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .videoEstilos {
+        width: 100%; /* Ocupar el 100% del ancho en pantallas muy chicas */
+    }
 }
