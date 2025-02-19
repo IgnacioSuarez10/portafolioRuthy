@@ -677,13 +677,9 @@ h2 {
     }
 
     .videoEstilos {
-        width: 90%; /* Que ocupe casi toda la pantalla en móviles */
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
 
-/* Estilos para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-    .videoEstilos {
-        width: 100%; /* Ocupar el 100% del ancho en pantallas muy chicas */
-    }
-}
+
