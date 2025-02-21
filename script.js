@@ -149,13 +149,4 @@ function posicionCarrusel() {
 }
 
 
-function mostrarContenedor(){
-    var contenedor = document.getElementById('contenedorVideos'); // Esto está bien
-    if(contenedor.style.display === 'none'){
-        contenedor.style.display = 'flex';
-    } else{
-            contenedor.style.display = 'none';
-    }
-}
-
 

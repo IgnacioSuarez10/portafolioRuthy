@@ -300,6 +300,14 @@ footer {
         text-align: center;
         gap: 5px;
     }
+    .social-icons {
+        order: 2; /* Hace que las redes sociales queden al final */
+        margin-top: 15px;
+    }
+
+    #fecha-hora {
+        order: 1;
+    }
 
     .right {
         flex-direction: column;
