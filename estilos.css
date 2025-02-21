@@ -301,12 +301,12 @@ footer {
         gap: 5px;
     }
     .social-icons {
-        order: 2; /* Hace que las redes sociales queden al final */
+        order: 1; /* Hace que las redes sociales queden al final */
         margin-top: 15px;
     }
 
     #fecha-hora {
-        order: 1;
+        order: 0;
     }
 
     .right {
