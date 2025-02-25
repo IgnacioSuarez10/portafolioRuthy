@@ -5,12 +5,30 @@ function enviarCorreo(event) {
     let nombre = document.getElementById("nombre").value;
     let celular = document.getElementById("celular").value;
     let mensaje = document.getElementById("mensaje").value;
+    
     let emailDestino = "ruthkuzli.mod@gmail.com";
-    let asunto = "Nuevo mensaje de contacto";
-    let cuerpo = `Nombre: ${nombre}%0ACelular: ${celular}%0AMensaje: ${mensaje}`;
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailDestino}&su=${asunto}&body=${cuerpo}`, '_blank');
-    document.getElementById("contacto").reset();
+    let asunto = encodeURIComponent("Nuevo mensaje de contacto");
+    let cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCelular: ${celular}\nMensaje: ${mensaje}`);
+
+    // Detectar si el usuario está en iOS o Android
+    let isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    let isAndroid = /Android/.test(navigator.userAgent);
+
+    if (isAndroid) {
+        // En Android, usa intent:// para abrir Gmail
+        window.location.href = `intent://compose?to=${emailDestino}&subject=${asunto}&body=${cuerpo}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
+    } else if (isIOS) {
+        // En iOS, usa el esquema especial de Gmail
+        window.location.href = `googlegmail://co?to=${emailDestino}&subject=${asunto}&body=${cuerpo}`;
+    } else {
+        // Como fallback, usa mailto en PC u otros dispositivos
+        window.location.href = `mailto:${emailDestino}?subject=${asunto}&body=${cuerpo}`;
+    }
+
+    // Limpiar el formulario después de enviarlo
+    document.getElementById("formulario").reset();
 }
+
 
     // modo oscuro y lo guarda en localStorage
 
