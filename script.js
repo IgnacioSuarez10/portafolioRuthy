@@ -8,7 +8,8 @@ function enviarCorreo(event) {
     let emailDestino = "ruthkuzli.mod@gmail.com";
     let asunto = "Nuevo mensaje de contacto";
     let cuerpo = `Nombre: ${nombre}%0ACelular: ${celular}%0AMensaje: ${mensaje}`;
-    window.location.href = `mailto:${emailDestino}?subject=${asunto}&body=${cuerpo}`;
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailDestino}&su=${asunto}&body=${cuerpo}`, '_blank');
+    document.getElementById("contacto").reset();
 }
 
     // modo oscuro y lo guarda en localStorage

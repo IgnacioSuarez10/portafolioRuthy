@@ -172,23 +172,7 @@ nav ul li a:hover {
     padding: 0 15px;
 }
 
-/* Estilos para el botón "Leer más" */
-.service-box .btn-leer-mas {
-    background: #ec407a;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
 
-.service-box .btn-leer-mas:hover {
-    background: #d81b60;
-}
 
 @media (max-width: 768px) {
     .services {
@@ -296,23 +280,32 @@ footer {
 
 @media (max-width: 768px) {
     footer {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 5px;
     }
+    
     .social-icons {
-        order: 1; /* Hace que las redes sociales queden al final */
-        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 10px 0; /* Espacio arriba y abajo */
     }
-
+    
+    /* Ajustamos el orden de los elementos dentro del footer */
     #fecha-hora {
-        order: 0;
+        order: 1;
     }
-
-    .right {
-        flex-direction: column;
-        gap: 10px;
+    
+    .social-icons {
+        order: 2; /* Lo coloca en el medio */
     }
+    
+    p:last-of-type { /* El párrafo del copyright */
+        order: 3;
+    }
+    
 }
 
 
@@ -504,14 +497,7 @@ h2 {
     color: #ffffff;
 }
 
-.dark-mode .service-box .btn-leer-mas {
-    background: #ffffff;
-    color: #121212;
-}
 
-.dark-mode .service-box .btn-leer-mas:hover {
-    background: #cccccc;
-}
 
 
 
