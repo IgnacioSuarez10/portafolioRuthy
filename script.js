@@ -26,7 +26,7 @@ function enviarCorreo(event) {
     }
 
     // Limpiar el formulario después de enviarlo
-    document.getElementById("contacto").reset();
+    document.getElementById("formularioCorreo").reset();
 }
 
 
