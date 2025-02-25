@@ -10,6 +10,10 @@ function enviarCorreo(event) {
     let asunto = encodeURIComponent("Nuevo mensaje de contacto");
     let cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCelular: ${celular}\nMensaje: ${mensaje}`);
 
+
+       // Limpiar el formulario después de enviarlo
+       document.getElementById("formularioCorreo").reset();
+       
     // Detectar si el usuario está en iOS o Android
     let isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
     let isAndroid = /Android/.test(navigator.userAgent);
@@ -25,8 +29,7 @@ function enviarCorreo(event) {
         window.location.href = `mailto:${emailDestino}?subject=${asunto}&body=${cuerpo}`;
     }
 
-    // Limpiar el formulario después de enviarlo
-    document.getElementById("formularioCorreo").reset();
+ 
 }
 
 
